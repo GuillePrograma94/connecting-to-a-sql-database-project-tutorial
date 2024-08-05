@@ -112,8 +112,8 @@ for statement in introduce_data.split(';'):
     if statement:
         connection.execute(statement)
 
-# 4) Use pandas to print one of the tables as dataframes using the read_sql function
-book_authors_df = pd.read_sql("SELECT * from book_authors", con=engine)
+# 4) Use pandas to print one of the tables as dataframes using the read_sql function #ERROR DE PANDAS VENIA POR TENER LA VERSION 2.2.2, FUNCIONA CON LA 2.1.4
+book_authors_df = pd.read_sql("SELECT * from book_authors", engine)
 print(book_authors_df)
 
 connection.close()
